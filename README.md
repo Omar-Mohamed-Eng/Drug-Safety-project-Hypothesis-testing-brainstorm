@@ -10,7 +10,7 @@
 
 This project presents an independent statistical analysis of a pharmaceutical randomized controlled trial (RCT) dataset. The analysis was conducted on behalf of a drug safety non-profit organization to evaluate whether a new drug is associated with adverse reactions at a statistically and clinically meaningful rate.
 
-The notebook follows a full, reproducible data science workflow: from exploratory analysis through formal hypothesis testing to a logistic regression predictive model — all with correct statistical methodology, no data leakage, and production-grade code organization.
+The notebook follows a full, reproducible data science workflow: from exploratory analysis through formal hypothesis testing to a random forest predictive model — all with correct statistical methodology, no data leakage, and production-grade code organization.
 
 ---
 
