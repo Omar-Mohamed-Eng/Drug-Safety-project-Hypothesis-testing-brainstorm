@@ -64,6 +64,7 @@ Outlier Analysis
 Statistical Testing (with multiple comparisons correction)
   ├── Normality checks (Shapiro-Wilk + Q-Q plots)
   ├── Continuous: Welch's t-test or Mann-Whitney U
+  ├── Statistical significant VS. Practical significant
   ├── Categorical: Chi-Square (+ Cramér's V)
   └── Benjamini-Hochberg FDR correction
     ↓
@@ -71,9 +72,9 @@ Machine Learning
   ├── Pipeline (ColumnTransformer + StandardScaler + OneHotEncoder)
   ├── Stratified train/test split
   ├── Stratified k-fold cross-validation
-  ├── Logistic Regression (class_weight='balanced')
+  ├── Random Forest (class_weight='balanced')
   ├── Confusion matrix + ROC curve
-  └── Feature importance (coefficients)
+  └── Feature importance
     ↓
 Conclusions & Business Recommendations
 ```
@@ -89,7 +90,7 @@ Conclusions & Business Recommendations
 
 ---
 
-## Statistical Methods
+## Statistical Methods (Parametric VS. Non-parametric)
 
 | Variable Pair | Test | Effect Size Metric |
 |---|---|---|
@@ -120,8 +121,8 @@ Multiple comparisons correction: **Benjamini-Hochberg FDR** (α = 0.05)
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/drug-safety-analysis.git
-cd drug-safety-analysis
+git clone https://github.com/Omar-Mohamed-Eng/Drug-Safety-project-Hypothesis-testing-brainstorm.git
+cd Drug-Safety-project-Hypothesis-testing-brainstorm
 
 # 2. Create virtual environment
 python -m venv venv
@@ -143,7 +144,7 @@ Ensure `drug_safety.csv` is placed in the project root directory.
 ```
 drug-safety-analysis/
 ├── notebook.ipynb          # Main analysis notebook
-├── drug_safety.csv         # Dataset (not included in repo — see source)
+├── drug_safety.csv         # Dataset
 ├── requirements.txt        # Python dependencies
 ├── README.md               # This file
 ├── CHANGELOG.md            # Version history and improvements
