@@ -58,20 +58,9 @@ One-hot encoding k categories produces k binary columns that sum to 1 — perfec
 
 ---
 
-## 🐍 Python / Code Engineering
-
-### 11. DRY — Don't Repeat Yourself
-If you copy-paste the same logic more than twice, write a function. The original imputation code had 4 near-identical lines. A `groupby.transform(lambda x: x.fillna(x.median()))` one-liner is:
-- Shorter
-- More readable
-- Easier to extend to new columns
-- Less likely to have bugs from manual copy-paste
-
----
-
 ## 📊 EDA
 
-### 12. EDA Should Tell a Story
+### 11. EDA Should Tell a Story
 EDA is not "run `.describe()` and some plots." It should progressively answer the business question:
 1. What does the target look like? (class balance)
 2. How does it vary by the key predictor? (treatment group)
@@ -80,15 +69,15 @@ EDA is not "run `.describe()` and some plots." It should progressively answer th
 
 Every plot should be followed by: What do I observe? Why does it matter? What will I do next?
 
-### 13. Always Visualise Your Target Variable First
+### 12. Always Visualise Your Target Variable First
 Before modelling, know your target distribution. An 80/20 imbalance completely changes your evaluation strategy.
 
 ---
 
 ## 🏥 Clinical Context Reminders
 
-### 14. Don't Remove Clinical Outliers Automatically
+### 13. Don't Remove Clinical Outliers Automatically
 Extreme WBC or RBC values may represent genuine pathological readings. Unlike price or sensor data, clinical outliers often contain the signal you're looking for. Always consult domain knowledge before removing.
 
-### 15. RCT Design ≠ Automatic Causal Inference
+### 14. RCT Design ≠ Automatic Causal Inference
 Even in an RCT, the statistical analysis doesn't automatically imply causality. Proper causal claims require: randomisation verification, ITT analysis, sensitivity analysis, and more. Statistical significance is not sufficient.
