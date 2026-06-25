@@ -86,7 +86,7 @@ Conclusions & Business Recommendations
 - The Chi-Square test did **not** find statistically significant evidence that drug vs. placebo assignment is associated with adverse effect occurrence (after BH correction).
 - **Important caveat:** Failure to reject H₀ does not confirm safety. It reflects the statistical power of this specific dataset.
 - No statistically significant association found between sex and adverse effects.
-- The logistic regression baseline provides a multivariate view; AUC-ROC reflects the discriminative difficulty given the feature set.
+- The Random Forest baseline provides a multivariate view; AUC-ROC reflects the discriminative difficulty given the feature set.
 
 ---
 
