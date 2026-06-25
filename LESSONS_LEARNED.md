@@ -67,29 +67,11 @@ If you copy-paste the same logic more than twice, write a function. The original
 - Easier to extend to new columns
 - Less likely to have bugs from manual copy-paste
 
-### 12. Configuration Constants, Not Magic Numbers
-```python
-# Bad
-X_train, X_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Good
-TEST_SIZE = 0.20
-RANDOM_STATE = 42
-X_train, X_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE)
-```
-Constants make changes trivial and communicate intent.
-
-### 13. Import Everything at the Top
-Scattered imports (`from scipy.stats import ttest_ind` inside a cell, then again later) make notebooks hard to reproduce and audit. All imports in one cell, at the top — always.
-
-### 14. Vectorisation Over Loops
-Pandas operations on Series/DataFrames are implemented in C and are orders of magnitude faster than Python loops. `df.groupby('sex')[col].transform(...)` is vectorised. `for row in df.iterrows()` is not.
-
 ---
 
 ## 📊 EDA
 
-### 15. EDA Should Tell a Story
+### 12. EDA Should Tell a Story
 EDA is not "run `.describe()` and some plots." It should progressively answer the business question:
 1. What does the target look like? (class balance)
 2. How does it vary by the key predictor? (treatment group)
@@ -98,15 +80,15 @@ EDA is not "run `.describe()` and some plots." It should progressively answer th
 
 Every plot should be followed by: What do I observe? Why does it matter? What will I do next?
 
-### 16. Always Visualise Your Target Variable First
+### 13. Always Visualise Your Target Variable First
 Before modelling, know your target distribution. An 80/20 imbalance completely changes your evaluation strategy.
 
 ---
 
 ## 🏥 Clinical Context Reminders
 
-### 17. Don't Remove Clinical Outliers Automatically
+### 14. Don't Remove Clinical Outliers Automatically
 Extreme WBC or RBC values may represent genuine pathological readings. Unlike price or sensor data, clinical outliers often contain the signal you're looking for. Always consult domain knowledge before removing.
 
-### 18. RCT Design ≠ Automatic Causal Inference
+### 15. RCT Design ≠ Automatic Causal Inference
 Even in an RCT, the statistical analysis doesn't automatically imply causality. Proper causal claims require: randomisation verification, ITT analysis, sensitivity analysis, and more. Statistical significance is not sufficient.
