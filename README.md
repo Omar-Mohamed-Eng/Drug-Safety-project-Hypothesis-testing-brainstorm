@@ -147,7 +147,6 @@ drug-safety-analysis/
 ├── drug_safety.csv         # Dataset
 ├── requirements.txt        # Python dependencies
 ├── README.md               # This file
-├── CHANGELOG.md            # Version history and improvements
 ├── .gitignore              # Git ignore rules
 └── figures/                # Exported visualisations (auto-generated)
     ├── fig1_target_distribution.png
