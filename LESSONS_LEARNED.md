@@ -56,6 +56,9 @@ If 85% of participants have "No adverse effect," a model predicting "No" every t
 ### 10. The Dummy Variable Trap
 One-hot encoding k categories produces k binary columns that sum to 1 — perfectly collinear. This inflates variance in linear models. Always use `drop='first'` (or `drop='if_binary'`) in `OneHotEncoder`.
 
+### 11. Why Random Forest?
+The hierarchical structure of tree-based models such as Decision Trees, Random Forests and Gradient Boosted Trees allows them to handle imbalanced datasets better than non-tree-based models.
+
 ---
 
 ## 📊 EDA
